@@ -1,0 +1,13 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      python: 3.8
+  build:
+    commands:
+      - pip install -r requirements.txt
+  post_build:
+    commands:
+      - python your_lambda_deployment_script.py
+artifacts:
+  files: your_lambda_deployment_script.py
